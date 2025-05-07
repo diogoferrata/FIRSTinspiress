@@ -1,0 +1,431 @@
+
+* Estilos Globais
+* Reset de margens e paddings, definição de fonte padrão e box-sizing
+*/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial;
+}
+
+/* 
+* Estilo do corpo da página
+* Define a cor de fundo para todo o site
+*/
+body {
+   background-color: #fefffa;
+}
+
+/* 
+* Menu de navegação
+* Controla a aparência da barra de navegação superior
+*/
+nav {
+   background-color: #fefffa; /* Fundo branco para o menu */
+   display: flex; /* Organiza elementos em linha */
+   justify-content: space-between; /* Distribui elementos uniformemente */
+   align-items: center; /* Alinha verticalmente ao centro */
+   padding: 0 20px; /* Espaçamento interno horizontal */
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave na parte inferior */
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+* Área esquerda do menu de navegação
+* Organiza o botão e o logo lado a lado
+*/
+.nav-left {
+   display: flex;
+   align-items: center;
+}
+
+/* 
+* Botão azul de busca
+* Estiliza o botão "Encontre a FIRST perto de você!"
+*/
+.blue-button {
+   background-color: #0066b3; /* Cor de fundo azul */
+   color: #fefffa; /* Texto branco */
+   border: none; /* Remove borda */
+   border-radius: 15px; /* Cantos arredondados */
+   padding: 3px 10px; /* Espaçamento interno */
+   font-size: 12px; /* Tamanho da fonte */
+   cursor: pointer; /* Cursor de mão ao passar o mouse */
+   margin-right: 15px; /* Espaço à direita */
+}
+
+/* 
+* Logo da FIRST
+* Define tamanho e margens do logo
+*/
+.logo {
+   height: 40px; /* Altura fixa */
+   margin: 10px 0; /* Margem vertical */
+   margin-right: 20px; /* Espaço à direita */
+}
+
+/* 
+* Menu de navegação principal
+* Lista horizontal de links de navegação
+*/
+.nav-menu {
+   display: flex; /* Organiza itens em linha */
+   list-style: none; /* Remove marcadores de lista */
+}
+
+/* 
+* Itens do menu
+* Controla cada item individual do menu principal
+*/
+.nav-menu li {
+   padding: 20px 15px; /* Espaçamento interno */
+}
+
+/* 
+* Links do menu
+* Estiliza a aparência dos links de navegação
+*/
+.nav-menu a {
+   color: #666; /* Cor cinza para os links */
+   text-decoration: none; /* Remove sublinhado */
+   font-size: 14px; /* Tamanho da fonte */
+}
+
+/* 
+* Ícone de busca
+* Estiliza o ícone de lupa na barra de navegação
+*/
+.search-icon {
+   color: #666; /* Cor cinza */
+   font-size: 18px; /* Tamanho do ícone */
+}
+
+/* 
+* Banner principal
+* Controla o banner com imagem de fundo e texto sobreposto
+*/
+.main-banner {
+   position: relative; /* Para posicionamento absoluto do conteúdo */
+   height: 600px; /* Altura fixa */
+   color: #fefffa; /* Cor do texto */
+   overflow: hidden; /* Esconde partes da imagem que ultrapassam o container */
+}
+
+/* 
+* Imagem de fundo do banner
+* Estiliza a imagem principal em tela cheia
+*/
+.banner-image {
+   width: 100%; /* Largura total */
+   height: 100%; /* Altura total */
+   object-fit: cover; /* Ajusta a imagem mantendo proporção e cobrindo a área */
+   filter: brightness(0.7); /* Escurece levemente a imagem para melhorar legibilidade do texto */
+}
+
+/* 
+* Conteúdo textual do banner
+* Posiciona e estiliza o texto sobreposto à imagem
+*/
+.banner-content {
+   position: absolute; /* Posicionamento absoluto sobre a imagem */
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex; /* Organiza conteúdo em coluna */
+   flex-direction: column;
+   justify-content: center; /* Centraliza verticalmente */
+   padding: 0 50px; /* Espaçamento horizontal */
+}
+
+/* 
+* Título principal do banner
+* Estiliza o título em destaque
+*/
+.banner-content h1 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 35px; /* Tamanho da fonte */
+   font-weight: bold; /* Negrito */
+   margin-bottom: 20px; /* Espaço abaixo */
+   max-width: 600px; /* Largura máxima */
+}
+
+/* 
+* Parágrafos do banner
+* Estiliza os textos descritivos
+*/
+.banner-content p {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 22px; /* Tamanho da fonte */
+   max-width: 600px; /* Largura máxima */
+   margin-bottom: 15px; /* Espaço abaixo */
+}
+
+/* 
+* Texto menor no banner
+* Estilo para texto descritivo secundário
+*/
+.banner-content p.smaller {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 18px; /* Tamanho reduzido da fonte */
+}
+
+/* 
+* Logo central
+* Controla o logo que separa o banner da galeria
+*/
+.center-logo {
+   display: flex; /* Flex para centralizar */
+   justify-content: center; /* Centraliza horizontalmente */
+   padding: 20px 0; /* Espaçamento vertical */
+}
+
+/* 
+* Imagem do logo central
+* Define a altura do logo
+*/
+.center-logo img {
+   height: 50px; /* Altura fixa */
+}
+
+/* 
+* Galeria de imagens
+* Container flexível para as imagens
+*/
+.image-gallery {
+   display: flex; /* Layout flexível */
+   flex-wrap: wrap; /* Permite quebra de linha */
+   padding: 0 20px; /* Espaçamento horizontal */
+}
+
+/* 
+* Item individual da galeria
+* Controla cada imagem da galeria
+*/
+.gallery-item {
+   flex: 1 0 25%; /* Base de 25% com crescimento */
+   padding: 5px; /* Espaçamento interno */
+   min-width: 250px; /* Largura mínima */
+   max-width: 33.333%; /* No máximo 1/3 da largura total */
+   
+}
+
+/* 
+* Imagens da galeria
+* Estiliza cada imagem individual
+*/
+.gallery-item img {
+   width: 100%; /* Largura total do container */
+   height: 200px; /* Altura fixa */
+   object-fit: cover; /* Mantém proporção cobrindo área */
+   border-radius: 5px; /* Cantos levemente arredondados */
+}
+
+/* 
+* Responsividade para telas médias
+* Ajusta layout para tablets
+*/
+@media (max-width: 768px) {
+   .gallery-item {
+       flex-basis: 50%; /* Duas imagens por linha */
+       max-width: 50%;
+   }
+}
+
+/* 
+* Responsividade para telas pequenas
+* Ajusta layout para smartphones
+*/
+@media (max-width: 480px) {
+   .gallery-item {
+       flex-basis: 100%; /* Uma imagem por linha */
+       max-width: 100%;
+   }
+   
+   .footer-main {
+       flex-direction: column; /* Empilha elementos em coluna */
+   }
+   
+   .footer-main > div {
+       width: 100%;
+       margin-bottom: 20px;
+       text-align: center;
+   }
+   
+   .social-icons {
+       justify-content: center;
+   }
+}
+
+/* 
+* Estilos do Footer Moderno
+* Design contemporâneo com múltiplas seções
+*/
+.modern-footer {
+   background-color: #222; /* Fundo escuro para contraste */
+   color: #f5f5f5; /* Texto claro */
+   padding: 0;
+   margin-top: 40px; /* Espaço acima do footer */
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+* Container de conteúdo do footer
+* Organiza todo o conteúdo do footer
+*/
+.footer-content {
+   max-width: 1200px; /* Largura máxima */
+   margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* 
+* Área principal do footer
+* Organiza logo, links, contato e redes sociais
+*/
+.footer-main {
+   display: flex; /* Layout flexível */
+   flex-wrap: wrap; /* Permite quebra de linha */
+   justify-content: space-between; /* Espaçamento uniforme */
+   padding: 40px 20px; /* Espaçamento interno */
+   border-bottom: 1px solid #444; /* Linha divisória */
+}
+
+/* 
+* Seções individuais do footer
+* Estiliza cada bloco de conteúdo
+*/
+.footer-main > div {
+   width: 22%; /* Aproximadamente 1/4 da largura */
+}
+
+/* 
+* Logo no footer
+* Estiliza o container do logo
+*/
+.footer-logo {
+   display: flex;
+   align-items: center;
+}
+
+/* 
+* Imagem do logo no footer
+* Ajusta o tamanho e brilho do logo sobre fundo escuro
+*/
+.footer-logo img {
+   height: 50px;
+   filter: brightness(1.2); /* Aumenta levemente o brilho para destacar no fundo escuro */
+}
+
+/* 
+* Títulos das seções do footer
+* Estiliza os cabeçalhos H3
+*/
+.footer-main h3 {
+   color: #0066b3; /* Azul da marca */
+   margin-bottom: 15px; /* Espaço abaixo */
+   font-size: 18px; /* Tamanho da fonte */
+   font-weight: 600; /* Semi-negrito */
+}
+
+/* 
+* Estilos para as listas no footer
+* Remove marcadores de lista
+*/
+.footer-links ul {
+   list-style: none; /* Remove bullets */
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+* Itens de lista no footer
+* Espaçamento entre itens
+*/
+.footer-links li {
+   margin-bottom: 8px; /* Espaço entre itens */
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+* Links no footer
+* Estiliza os links de navegação
+*/
+.footer-main a {
+   color: #ccc; /* Cor cinza claro */
+   text-decoration: none; /* Remove sublinhado */
+   transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+/* 
+* Estado hover dos links
+* Efeito ao passar o mouse sobre links
+*/
+.footer-main a:hover {
+   color: #0066b3; /* Azul da marca ao passar o mouse */
+}
+
+/* 
+* Informações de contato
+* Estiliza textos da seção de contato
+*/
+.footer-contact p {
+   margin-bottom: 8px; /* Espaço entre linhas */
+   font-size: 14px; /* Tamanho da fonte */
+}
+
+/* 
+* Container dos ícones sociais
+* Organiza os ícones de redes sociais
+*/
+.social-icons {
+   display: flex; /* Layout flexível */
+   gap: 10px; /* Espaçamento entre ícones */
+}
+
+/* 
+* Ícones de redes sociais
+* Estiliza cada ícone individual
+*/
+.social-icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px; /* Largura fixa */
+   height: 36px; /* Altura fixa */
+   background-color: #333; /* Fundo mais escuro */
+   border-radius: 50%; /* Formato circular */
+   color: #fff; /* Texto branco */
+   font-size: 14px; /* Tamanho da fonte */
+   transition: background-color 0.3s; /* Transição suave */
+}
+
+/* 
+* Estado hover dos ícones sociais
+* Efeito ao passar o mouse sobre ícones
+*/
+.social-icon:hover {
+   background-color: #0066b3; /* Muda para azul da marca */
+}
+
+/* 
+* Barra de copyright
+* Estiliza a área inferior com informações de copyright
+*/
+.copyright-bar {
+   display: flex; /* Layout flexível */
+   justify-content: space-between; /* Espaçamento entre elementos */
+   align-items: center; /* Alinhamento vertical */
+   padding: 20px; /* Espaçamento interno */
+   font-size: 14px; /* Tamanho da fonte */
+   color: #888; /* Cor cinza médio */
+}
+
+/* 
+* Nome do desenvolvedor
+* Destaca o nome do desenvolvedor
+*/
+.developer {
+   color: #0066b3; /* Azul da marca */
+   font-weight: 600; /* Semi-negrito */
+}
